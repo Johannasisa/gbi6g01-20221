@@ -13,3 +13,10 @@
 - Github Desktop 3.6.0
 
 Repositorio del curso de Bioinformática Semestre 20221
+
+
+
+Tarea 2
+
+
+
