@@ -1,0 +1,740 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Johannasisa/gbi6g01-20221/blob/main/TC5_IntroPython\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7Ky2AQSKyaug"
+      },
+      "source": [
+        "# BIOINFORMÁTICA\n",
+        "## CLASE 6: Introducción a Python\n",
+        "\n",
+        "En esta clase vamos revisar los siguientes contrenidos:\n",
+        "1. Historia de Python\n",
+        "2. Tipos de datos\n",
+        "3. operaciones con números\n",
+        "4. Operaciones con texto\n",
+        "\n",
+        "## 1. HISTORIA PYTHON\n",
+        "La historia de python se puede leer en la [página web de python] (https://docs.python.org/3/)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mUXEXzAH09k9"
+      },
+      "source": [
+        "## 2. TIPOS DE DATOS\n",
+        "- Numéricos: enteros (integer, int), decimales (double), complejos (complex).\n",
+        "- Lógicos: Vderdadero (TRUE, T), Falso (FALSE, F).\n",
+        "- Texto: Cadena de caracteres \"Siempre entre comillas\" \n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "qcyo7yNqyUH0"
+      },
+      "outputs": [],
+      "source": [
+        "gen1_r = 1.5\n",
+        "gen1_h = 1.7\n",
+        "dif_gen1 = gen1_r - gen1_h\n",
+        "ratio_gen1 = gen1_r / gen1_h\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nu2wSWt-6ZMG",
+        "outputId": "60b6af74-5ecc-400b-b9f7-e14c43cecba9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "gen1_h: 1.7\n",
+            "gen1_r: 1.5\n",
+            "dif_gen1: -0.19999999999999996\n",
+            "ratio_gen1: 0.8823529411764706\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"gen1_h:\", gen1_h)\n",
+        "print(\"gen1_r:\", gen1_r)\n",
+        "print(\"dif_gen1:\", dif_gen1)\n",
+        "print(\"ratio_gen1:\", ratio_gen1)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3ZzCbeBi8hwC"
+      },
+      "source": [
+        "OPERACIONES CON TEXTO"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "hT20Oox98rKW",
+        "outputId": "22486031-f38e-4718-e474-c0b66bf3a2b7"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'HOLA CON TODOS, QUE BUENO QUE NO HAY EXAMEN'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ],
+      "source": [
+        "saludo = \"hola con todos, que bueno que no hay examen\"\n",
+        "saludo.upper()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tohWkBIG9z8C",
+        "outputId": "438843a4-f2b9-4327-b647-055dd2ac1939"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "43"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "source": [
+        "len(saludo)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BX9f-OoH-wtJ",
+        "outputId": "6c68bd72-e60a-471b-a7f2-6484d04f9262"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Porcentaje de a 6.976744186046512\n"
+          ]
+        }
+      ],
+      "source": [
+        "# En este bloque se revisael uso coimbinado de funciones\n",
+        "total = len(saludo)\n",
+        "char_a = saludo.count(\"a\")\n",
+        "ratio_a = 100*char_a / total\n",
+        "print(\"Porcentaje de a\", ratio_a)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "round(ratio_a, 2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Z_4SDfgx83r9",
+        "outputId": "25c4ef99-3582-4f0b-f471-af52230760b6"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6.98"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "PORCENTAJE DE GC\n",
+        "\n",
+        "Calcular el porcentaje de contenido de nucléotidos G y C en la siguiente secuencia"
+      ],
+      "metadata": {
+        "id": "AU_9RY5-9r6I"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p53_l1 = \"TTCCTGGNCTGTAGGTAGCGACTACAGTTAGGGGGCACCTAGCATTCAGGCCCTCATCCTCCTCCTTCCCAGCAGGGTGTCACGCTTCTCCGAAGACTGGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTACTTCCTCCAGAAGATATCCTGCCATC\""
+      ],
+      "metadata": {
+        "id": "WDKdG00x9u7u"
+      },
+      "execution_count": 22,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Calcular el porcentaje de GC"
+      ],
+      "metadata": {
+        "id": "YT5WiRJs-Ofj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "percent_GC = 100*(p53_l1.count(\"G\") + p53_l1.count(\"C\"))/len(p53_l1)\n",
+        "print(\"Porcentaje GC en P53_lineal:\", round(percent_GC, 3))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AxNAtgYk-YUJ",
+        "outputId": "ebdb27c9-944a-4de4-a411-5168a76e5ddd"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Porcentaje GC en P53_lineal: 54.286\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Subconjunto\n",
+        "print(p53_l1)\n",
+        "fi = p53_l1.find(\"TAC\") # Si se tiene\n",
+        "ff1 = p53_l1.find(\"ATT\") # Si se tiene\n",
+        "ff2 = p53_l1.find(\"ATC\")\n",
+        "ff3 = p53_l1.find(\"ACT\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "111AiV8B_Ifk",
+        "outputId": "557ebab4-85a2-49d8-fe4c-51427fad4575"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "TTCCTGGNCTGTAGGTAGCGACTACAGTTAGGGGGCACCTAGCATTCAGGCCCTCATCCTCCTCCTTCCCAGCAGGGTGTCACGCTTCTCCGAAGACTGGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTACTTCCTCCAGAAGATATCCTGCCATC\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fi"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Sp0sd86A_Pnu",
+        "outputId": "7c6a17f4-4aa3-4c5d-e442-5534b834adf8"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "22"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 25
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ff1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q6yk4qXK_Rut",
+        "outputId": "8933ec45-6e5f-429b-856c-4f751bbad69e"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "43"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 26
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ff2"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RQkCHYYA_dTw",
+        "outputId": "911c32ed-8284-44d5-dd60-9863422ba524"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "55"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ff3"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AhqbNKHw_f5I",
+        "outputId": "586dd2dd-28af-4156-f8f4-f2fea4dea4db"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "20"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p53_l1[3:6]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "nfp5A0f7_nSc",
+        "outputId": "cdd53f65-bdaa-4760-8075-5592481dddbe"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'CTG'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 29
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mRNA_f1 = p53_l1[fi:ff1+3]\n",
+        "mRNA_f1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "G-4yu2ks_uF1",
+        "outputId": "de8886ec-8f85-4162-995a-0e837cc51b65"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'TACAGTTAGGGGGCACCTAGCATT'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 30
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Cadena complementaria\n",
+        "print(saludo)\n",
+        "saludo.replace(\"x\", \"e\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 53
+        },
+        "id": "khHTkPPU_3T0",
+        "outputId": "f9214fb7-91f3-4656-e89b-e1bca5cde9d3"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hola con todos, que bueno que no hay examen\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'hola con todos, que bueno que no hay eeamen'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p53_a = p53_l1.replace(\"A\", \"t\")\n",
+        "p53_t = p53_a.replace(\"T\", \"a\")\n",
+        "p53_g = p53_t.replace(\"G\", \"c\")\n",
+        "p53_c = p53_g.replace(\"C\", \"g\")\n",
+        "p53_l1c= p53_c.upper()\n",
+        "p53_l1c"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 53
+        },
+        "id": "p4ZZ_a0pANEd",
+        "outputId": "1d4fdad7-be95-4ee4-d166-8d5d12737ca9"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'AAGGACCNGACATCCATCGCTGATGTCAATCCCCCGTGGATCGTAAGTCCGGGAGTAGGAGGAGGAAGGGTCGTCCCACAGTGCGAAGAGGCTTCTGACCTACTGACGGTACCTCCTCAGTGTCAGCCTATAGTCGGAGCTCGAGGGAGACTCGGTCCTCTGTAAAAGTCCGAATACCTTTGATGAAGGAGGTCTTCTATAGGACGGTAG'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 32
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(p53_l1)\n",
+        "print(p53_l1c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FqtIVD0dASMe",
+        "outputId": "721f59a0-a71a-4333-93ca-3ebb2a732306"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "TTCCTGGNCTGTAGGTAGCGACTACAGTTAGGGGGCACCTAGCATTCAGGCCCTCATCCTCCTCCTTCCCAGCAGGGTGTCACGCTTCTCCGAAGACTGGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTACTTCCTCCAGAAGATATCCTGCCATC\n",
+            "AAGGACCNGACATCCATCGCTGATGTCAATCCCCCGTGGATCGTAAGTCCGGGAGTAGGAGGAGGAAGGGTCGTCCCACAGTGCGAAGAGGCTTCTGACCTACTGACGGTACCTCCTCAGTGTCAGCCTATAGTCGGAGCTCGAGGGAGACTCGGTCCTCTGTAAAAGTCCGAATACCTTTGATGAAGGAGGTCTTCTATAGGACGGTAG\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p53_l1c_r = p53_l1c[::-1]\n",
+        "print(p53_l1)\n",
+        "print(p53_l1c)\n",
+        "print(p53_l1c_r)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UKVTB0IIAYqb",
+        "outputId": "e01639d2-4d1d-4293-96ae-e1755ee401b4"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "TTCCTGGNCTGTAGGTAGCGACTACAGTTAGGGGGCACCTAGCATTCAGGCCCTCATCCTCCTCCTTCCCAGCAGGGTGTCACGCTTCTCCGAAGACTGGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTACTTCCTCCAGAAGATATCCTGCCATC\n",
+            "AAGGACCNGACATCCATCGCTGATGTCAATCCCCCGTGGATCGTAAGTCCGGGAGTAGGAGGAGGAAGGGTCGTCCCACAGTGCGAAGAGGCTTCTGACCTACTGACGGTACCTCCTCAGTGTCAGCCTATAGTCGGAGCTCGAGGGAGACTCGGTCCTCTGTAAAAGTCCGAATACCTTTGATGAAGGAGGTCTTCTATAGGACGGTAG\n",
+            "GATGGCAGGATATCTTCTGGAGGAAGTAGTTTCCATAAGCCTGAAAATGTCTCCTGGCTCAGAGGGAGCTCGAGGCTGATATCCGACTGTGACTCCTCCATGGCAGTCATCCAGTCTTCGGAGAAGCGTGACACCCTGCTGGGAAGGAGGAGGATGAGGGCCTGAATGCTAGGTGCCCCCTAACTGTAGTCGCTACCTACAGNCCAGGAA\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# complementario reverso\n",
+        "ficr = p53_l1c_r.find(\"TAC\") # Si se tiene\n",
+        "ff1cr = p53_l1c_r.find(\"ATT\") # Si se tiene\n",
+        "ff2cr = p53_l1c_r.find(\"ATC\")\n",
+        "ff3cr = p53_l1c_r.find(\"ACT\")\n",
+        "mRNA_f1cr =p53_l1[ficr:ff1cr+3]\n",
+        "mRNA_f1cr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "RbAbjC7dCH7r",
+        "outputId": "c6c556b5-fb3a-4fe3-a3c9-2e5170b5a9a5"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "''"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 35
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ficr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vPWMLZFDCLIk",
+        "outputId": "a9c009a0-425d-4774-bfea-3187866d4c22"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "193"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 36
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ff1cr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f9XSH-UWCQCP",
+        "outputId": "375a297a-177a-4c92-9c49-f6af1f6c2deb"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 37
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ff2cr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qzaWEwxiCUQL",
+        "outputId": "db3dfc20-dceb-4ad4-f42a-bb3eb69e72ce"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "11"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 38
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ff3cr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NmKNa7AvCZAF",
+        "outputId": "1120c3df-0dfc-4e3c-8bf0-0f612a7db0c6"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "85"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 39
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "clase6_intro_python",
+      "provenance": [],
+      "authorship_tag": "ABX9TyP51a2fWMqs92xe+Cga6Fwa",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
